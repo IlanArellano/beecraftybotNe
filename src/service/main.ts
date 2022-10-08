@@ -75,7 +75,7 @@ export const postServerRequest = async <IBody, IReponse>(
         fatal: true,
         message: typeof err === "string" ? err : null,
         error_type: 3,
-        axiosError: err instanceof AxiosError ? err : undefined,
+        axiosError: err instanceof AxiosError && err,
       },
     };
   }

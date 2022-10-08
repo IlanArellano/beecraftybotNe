@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js"
+    "start": "tsc && npm run copy && node dist/index.js",
+    "copy": "node copyMessage.js"
   },
   "keywords": [],
   "author": "",

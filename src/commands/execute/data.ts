@@ -1,9 +1,10 @@
-import { SlashCommandBuilder } from "discord.js";
+import { SlashCommandBuilder, PermissionFlagsBits } from "discord.js";
 
 const data = () => {
   const commandBuilder = new SlashCommandBuilder()
     .setName("execute")
-    .setDescription("Ejecuta un comando al servidor de Minecraft");
+    .setDescription("Ejecuta un comando al servidor de Minecraft")
+    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator);
 
   commandBuilder.addStringOption((option) =>
     option

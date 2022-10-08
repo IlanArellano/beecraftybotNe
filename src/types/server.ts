@@ -42,6 +42,11 @@ export interface Register_Body {
   mode: Mode;
 }
 
+export interface Unlink_Body {
+  discord_id: string;
+  reason?: string;
+}
+
 enum ERROR_TYPES {
   USER = 1,
   SERVER = 2,

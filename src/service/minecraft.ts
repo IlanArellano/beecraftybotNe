@@ -5,6 +5,7 @@ import type {
   Command_Success,
   Execute_Body,
   Register_Body,
+  Unlink_Body,
 } from "../types";
 
 export const MinecraftRegisterService = async (
@@ -16,3 +17,8 @@ export const MinecraftExecuteService = async (
   obj: Execute_Body
 ): Promise<Server_Response<Command_Success>> =>
   postServerRequest("execute", obj);
+
+export const MinecraftUnlinkService = async (
+  obj: Unlink_Body
+): Promise<Server_Response<Command_Success>> =>
+  postServerRequest("unlink", obj);
